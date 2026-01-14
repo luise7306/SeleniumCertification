@@ -1,0 +1,16 @@
+# Gitpod configuration for Selenium Certification project
+# https://www.gitpod.io/docs/references/gitpod-yml
+
+image: gitpod/workspace-full
+
+tasks:
+  - name: Build Project
+    init: |
+      mvn clean install -DskipTests
+    command: |
+      echo "Project ready. Run tests with: mvn test"
+
+vscode:
+  extensions:
+    - vscjava.vscode-java-pack
+    - vscjava.vscode-maven
